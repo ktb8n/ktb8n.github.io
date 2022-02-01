@@ -1,0 +1,348 @@
+body {
+    background-image: url("images/Coloring\ Book\ copy.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+  
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: .25fr .25fr 3fr .25fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { 
+        grid-area: 1 / 1 / 2 / 6;
+        
+    }
+    .div2 { 
+        grid-area: 2 / 1 / 3 / 6; 
+    }
+    .div3 { 
+        grid-area: 3 / 1 / 4 / 6;
+        color: white; 
+        position:relative;
+    }
+    .div4 {
+        grid-area: 4 / 3 / 5 / 4;
+        display: flex;
+        background-color: black;
+    }
+.div1 table {
+    float: right;
+    margin: 5px;
+}
+.headshot-hover {
+    background: url("images/Portrait01.png") no-repeat;
+    z-index: 2;
+    height:200px;
+    width:200px;
+    position: absolute;
+    top: 10px;
+    left:10px;
+    
+
+}
+.headshot-hover:hover {
+    background: url("images/Portrait02.png") no-repeat;
+    z-index: 1;
+    height:200px;
+    width:200px;
+    position: absolute;
+    top: 10px;
+    left:10px;
+}
+
+.animate1 {
+     animation-duration: 1.5s;
+     animation-name: animate-fade;
+     animation-delay: 0.5s;
+     animation-fill-mode: backwards;
+   }
+.animate2 {
+    animation-duration: 1.5s;
+    animation-name: animate-fade;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
+  }
+
+.animate3 {
+    animation-duration: 1.5s;
+    animation-name: animate-fade;
+    animation-delay: 2.5s;
+    animation-fill-mode: backwards;
+  }
+   
+.animate4 {
+    animation-duration: 3s;
+    animation-name: animate-fade;
+    animation-delay: 3s;
+    animation-fill-mode: backwards;
+    position: relative;
+}
+
+span.animate4 {
+    display: inline;
+}
+   @keyframes animate-fade {
+     0% { opacity: 0; }
+     100% { opacity: 1; }
+   }
+.cursive {
+    font-family: 'Titillium Web', sans-serif;
+    background-color: black;
+}
+
+div.hero-image {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    position: relative;
+}
+
+div.hero-text {
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    font-size: 2em;
+}
+div.hero-text > h2 {
+    font-size: 4.5rem;
+    text-align: right;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-right: 5%;
+    margin: 5%;
+}
+
+
+.div3 > div {
+    margin: 3%;
+    padding: 3%;
+}
+
+/* .project1 {
+    display: flexbox
+} */
+
+.video {
+    text-align: center;
+}
+
+.projects div > h3 {
+    padding-right: 2%;
+}
+
+.projects div.media-wrapper {
+    height: 300px;
+    width: 500px;
+    background-color: plum;
+    border-radius: 3%;
+    margin-left: 5%;
+}
+div.bio > h3 {
+    margin-right: 3%;
+}
+div.bio > p {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+div.bio p.contact {
+    text-align: center;
+    font-size: 2em;
+}
+
+table.icons.contact {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+
+/* Project Columns*/
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+      }
+  
+  /* Project Columns */
+  .project-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Stack columns on small screen */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      text-align: center;
+    }
+
+    .videoIntro {
+    width: 400px;
+    height: 200px;
+    }
+     .projects div.media-wrapper {
+    height: 200px;
+    width: 350px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0;
+    }
+    .div4 {
+        white-space: nowrap;
+    }
+    .div4 h4 a.to-top {
+     color: white;
+    }
+  }
+  
+/* GOES ALONG WITH FIRST ITERATION OF HTML */
+/* @media (max-width: 800px) {
+    .div3 {
+      flex-direction: column;
+    }
+    .div2 ul {
+        display: flex-column
+    }
+  }
+
+ body {
+     background-image: url(images/background_paint-drips_2022_6.JPG);
+     background-size: cover;
+     background-attachment: fixed;
+ } 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 4; }
+    .div2 { grid-area: 1 / 4 / 2 / 6; }
+    .div3 { 
+        grid-area: 2 / 1 / 3 / 6; 
+        text-align: center;
+        display: flex;
+    }
+    .div4 { 
+        grid-area: 3 / 1 / 4 / 6;
+        display: flex;
+        background-color: rgba(218, 165, 32, .5);
+        align-items: center;
+        justify-content: center;
+    }
+.div1 .div2 .div3 .div4 {
+    box-shadow: 10px 10px 5px 5px rgba(0,0,0, .3);
+}
+.div3 > div {
+    background-color: rgba(218, 165, 32, .5);
+    padding: 10px;
+    font-size: 1.2em;
+    border-top: 3px solid rgb(252, 232, 146);
+}
+.flex-item-left {
+    flex: 50%;
+  }
+  
+.flex-item-right {
+    flex: 50%;
+  }
+  
+
+.headshot-hover {
+    background: url("images/Portrait01.png") no-repeat;
+    z-index: 2;
+    width: auto;
+
+}
+.headshot-hover:hover {
+    background: url("images/Portrait02.png") no-repeat;
+    z-index: 1;
+    width: auto;
+}
+.copyright {
+    font-size: 10px;
+}
+
+ul.nav li a{
+    color: rgb(252, 232, 146) !important;
+    }
+ul.nav li a:hover{
+    color: rgb(182, 149, 5) !important;
+    }
+
+.cursive {
+    font-family: 'Dancing Script';
+}
+
+.animate {
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+  }
+  
+  @keyframes animate-fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+div.div4 ul {
+    margin-top: 20px;
+}
+
+div.div4 ul >li {
+    display: inline;
+    list-style-type: none;
+    margin: 20px 10px 10px 10px;
+    padding-top: 5px;
+}
+
+table#skill-table {
+    margin: auto;
+}
+
+table#skill-table tr>td {
+    text-align: left;
+    padding: 5px;
+}
+
+.videoFrame {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 66.66%; 
+}
+
+div.videoFrame > iframe {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 5px solid rgb(252, 232, 146);
+    align-content: center;
+}
+
+.responsiveVideo {
+
+    top: 0;
+    left: auto;
+    bottom: 0;
+    right: auto;
+    width: auto;
+    height: 80%;
+}
+
+div.div4 > div.blackbox {
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+}
+
+div.div4 div.blackbox > h2 {
+    color:rgb(182, 149, 5);
+}
+*/
