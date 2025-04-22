@@ -1,0 +1,184 @@
+.productivity-timer {
+  padding: 1rem;
+  max-width: 800px;
+  margin: auto;
+  font-family: sans-serif;
+  color: #222;
+  position: relative;
+  transition: background-color 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Make sure there's space between sections */
+  height: 100%;
+}
+
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+  transition: opacity 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.inputs label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.inputs input {
+  padding: 0.3rem;
+  font-size: 1rem;
+  width: 60px;
+  text-align: center;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.visual-container {
+  margin-top: 2rem;
+  position: relative;
+  height: 30px;
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.visual-track {
+  position: relative;
+  height: 100%;
+  display: flex;
+  width: 100%; /* Ensure the track fills the container */
+}
+
+.segment {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+
+.segment.prep {
+  background: #999;
+}
+
+.segment.focus {
+  background: #4caf50;
+}
+
+.segment.break {
+  background: #03a9f4;
+}
+
+.segment.wrap {
+  background: #ff9800;
+}
+
+.segment.active {
+  opacity: 1;
+  border: 2px solid #000;
+}
+
+.progress-indicator {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: white;
+  z-index: 1;
+  transition: left 1s linear;
+  pointer-events: none;
+}
+
+
+.time-display {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.dimmed .inputs {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.time-stats {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.time-display {
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.time-remaining {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.time-remaining.focus {
+  color: #4caf50;
+}
+
+.time-remaining.break {
+  color: #03a9f4;
+}
+
+.time-remaining.prep {
+  color: #999;
+}
+
+.time-remaining.wrap {
+  color: #ff9800;
+}
+
+.phase-label {
+  font-size: 1.2rem;
+  color: #666;
+  text-transform: uppercase;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.start-btn,
+.stop-btn {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.start-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.stop-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #999;
+}
