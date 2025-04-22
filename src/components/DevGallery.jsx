@@ -5,7 +5,7 @@ import movingEyesImage from "../assets/dev/SofonisbaAnguissola.png";
 import mitBusImage from "../assets/dev/realTimeBus.png";
 import errorToITImage from "../assets/dev/errorToIT1.png";
 import shippingFormImage from "../assets/dev/shippingForm1.png";
-import outlookerImage from "../assets/dev/outlookerImage.png";
+import outlookerImage from "../assets/dev/outlookerImagePrivate.png";
 import productivityTimerImage from "../assets/dev/ProductivityTimerImage.png";
 export default function DevGallery() {
 	const [activeProject, setActiveProject] = useState(null);
