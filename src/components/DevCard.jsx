@@ -1,9 +1,14 @@
 import React, { useRef } from "react";
-import overlay from "./assets/dev/IBMFrame.png";
+import overlay from "../assets/dev/IBMFrame.png";
 import "./DevCard.css"; 
 
 export default function DevCard({ project, onClick, tooltip }) {
     const imgRef = useRef(null);
+if (!project) {
+	console.error("❌ DevCard received undefined 'project' prop");
+	return null;
+};    
+
 
 
 

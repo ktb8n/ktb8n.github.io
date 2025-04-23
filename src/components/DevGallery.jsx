@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DevCard from "./DevCard.jsx";
+import DevCard from "./DevCard";
 import DevDetailModal from "./DevDetailModal";
 import movingEyesImage from "../assets/dev/SofonisbaAnguissola.png";
 import mitBusImage from "../assets/dev/RealTimeBus.png";
@@ -73,7 +73,7 @@ export default function DevGallery() {
 				{devProjects.map((proj) => (
 					<DevCard
 						key={proj.id}
-						artwork={proj}
+						project={proj}
 						onClick={() => handleCardClick(proj)}
 						tooltip={proj.tooltip}
 					/>

@@ -3,6 +3,13 @@
 	max-width: 100%;
 	cursor: pointer;
 	transition: transform 0.2s;
+	aspect-ratio: 4 / 3;
+	overflow: hidden;
+}
+
+.dev-card:hover .tooltip {
+	visibility: visible;
+	opacity: 1;
 }
 
 .tooltip {
@@ -23,28 +30,26 @@
 	pointer-events: none;
 }
 
-.dev-card:hover .tooltip {
-	visibility: visible;
-	opacity: 1;
-}
-
-.dev-card img {
-	max-height: 180px;
-	width: auto;
+.dev-card img.thumbnail {
+	max-height: 140px;
+	width: 90%;
 	object-fit: contain;
 	max-width: 100%;
 	transition: filter 0.2s;
+	display: block;
 }
 
-.dev-card img:hover {
+.dev-card img.thumbnail:hover {
 	filter: brightness(1.2);
 }
 
-.dev-card .frame {
+.dev-card img.frame-overlay {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
+	transform-origin: center;
 	pointer-events: none;
+	z-index: 2;
 }

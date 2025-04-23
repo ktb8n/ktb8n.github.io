@@ -1,5 +1,6 @@
 .moving-eyes-container  {
 	position: relative;
+	margin-top: 0;
 	height: 70%;
 	width: auto;
 	aspect-ratio: 3 / 4; /* or adjust to fit the portrait */
