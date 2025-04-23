@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ArtCard from "./ArtCard";
+import DevCard from "./DevCard.jsx";
 import DevDetailModal from "./DevDetailModal";
 import movingEyesImage from "../assets/dev/SofonisbaAnguissola.png";
 import mitBusImage from "../assets/dev/RealTimeBus.png";
@@ -71,10 +71,11 @@ export default function DevGallery() {
 			<h2>Engineering Projects</h2>
 			<div className='gallery-flex'>
 				{devProjects.map((proj) => (
-					<ArtCard
+					<DevCard
 						key={proj.id}
 						artwork={proj}
 						onClick={() => handleCardClick(proj)}
+						tooltip={proj.tooltip}
 					/>
 				))}
 			</div>

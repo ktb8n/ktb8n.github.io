@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import frameOverlay from "../assets/art/HollowFrame.png";
+import "./ArtCard.css"; 
 
-export default function ArtCard({ artwork, onClick }) {
+export default function ArtCard({ artwork, onClick, tooltip }) {
 	const [isWide, setIsWide] = useState(false);
 	const imgRef = useRef(null);
 
@@ -34,6 +35,7 @@ export default function ArtCard({ artwork, onClick }) {
 				overflow: "hidden",
 			}}
 		>
+			<div className='tooltip'>{tooltip}</div>
 			<div
 				style={{
 					position: "absolute",

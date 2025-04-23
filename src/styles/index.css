@@ -38,34 +38,6 @@ footer {
 	justify-content: center;
 }
 
-/* ====== Art Card Styles ====== */
-.art-card {
-	position: relative;
-	max-width: 100%;
-	cursor: pointer;
-	transition: transform 0.2s;
-}
-
-.art-card img {
-	max-height: 180px;
-	width: auto;
-	object-fit: contain;
-	max-width: 100%;
-	transition: filter 0.2s;
-}
-
-.art-card img:hover {
-	filter: brightness(1.2);
-}
-
-.art-card .frame {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
-}
 
 /* ====== Header Layout ====== */
 .main-header {
