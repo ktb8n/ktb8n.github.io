@@ -55,7 +55,7 @@ export default function ArtGallery({ artworks }) {
 					onClick={() => setIsFilterExpanded(!isFilterExpanded)}
 					style={{
 						padding: "0.25rem 0.5rem",
-						backgroundColor: "#555",
+
 						color: "#fff",
 						border: "none",
 						cursor: "pointer",
@@ -67,7 +67,9 @@ export default function ArtGallery({ artworks }) {
 
 			<div className='gallery-layout'>
 				<div
-					className={`filter-column ${isFilterExpanded ? "slide-in" : "slide-out"}`}
+					className={`filter-column ${
+						isFilterExpanded ? "slide-in" : "slide-out"
+					}`}
 				>
 					<Filter
 						allMediums={allMediums}
@@ -79,13 +81,15 @@ export default function ArtGallery({ artworks }) {
 					/>
 				</div>
 				<div className='gallery-grid'>
-					{filteredArtworks.map((art) => (
-						<ArtCard
-							key={art.id}
-							artwork={art}
-							onClick={() => setSelectedArt(art)}
-						/>
-					))}
+					{[...filteredArtworks]
+						.sort((a, b) => parseInt(b.year) - parseInt(a.year))
+						.map((art) => (
+							<ArtCard
+								key={art.id}
+								artwork={art}
+								onClick={() => setSelectedArt(art)}
+							/>
+						))}
 				</div>
 			</div>
 
