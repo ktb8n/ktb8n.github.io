@@ -1,50 +1,66 @@
 .art-card {
-	position: relative;
-	max-width: 100%;
-	cursor: pointer;
-	transition: transform 0.2s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	border-radius: 8px;
+	padding: 1rem;
+	box-sizing: border-box;
+	transition: transform 0.2s ease;
 }
 
-.tooltip {
-	visibility: hidden;
-	background-color: #333;
-	color: #fff;
-	text-align: center;
-	border-radius: 6px;
-	padding: 0.5rem;
+.art-thumb-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 	position: absolute;
-	z-index: 1;
-	bottom: 100%;
-	left: 50%;
-	transform: translateX(-50%);
-	opacity: 0;
-	transition: opacity 0.3s ease;
-	white-space: nowrap;
-	pointer-events: none;
+	inset: 0;
 }
 
-.art-card:hover .tooltip {
-	visibility: visible;
-	opacity: 1;
-}
 
 .art-card img {
-	max-height: 180px;
-	width: auto;
-	object-fit: contain;
-	max-width: 100%;
-	transition: filter 0.2s;
-}
-
-.art-card img:hover {
-	filter: brightness(1.2);
+  max-height: 500px;
+  width: 100%; /* Ensures image fills the container's width */
+  object-fit: contain;
+  transition: filter 0.2s;
 }
 
 .art-card .frame {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.art-card:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.art-card:hover .thumbnail {
+  filter: brightness(1.4);
 }

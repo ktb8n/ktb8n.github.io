@@ -29,9 +29,16 @@ footer {
   font-family: "Special Gothic Condensed One", sans-serif;
 }
 
+h2 {
+	  color: #ccc;
+  font-family: "Special Gothic Condensed One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* ====== Gallery Layout ====== */
-.gallery-flex {
+.dev-gallery-item {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
@@ -181,3 +188,73 @@ footer {
 .social-link.email:hover {
 	color: #c23a2b; /* Email red-ish */
 }
+
+.gallery-layout {
+	display: flex;
+	gap: 1rem;
+	align-items: flex-start;
+}
+
+.filter-column {
+	width: 200px;
+	flex-shrink: 0;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.slide-in {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.slide-out {
+	transform: translateX(-220px);
+	opacity: 0;
+	pointer-events: none;
+	position: absolute; /* prevents layout shift */
+}
+
+.gallery-grid {
+	flex: 1; /* ← allow it to grow */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.filter-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	color: #fff;
+}
+
+.filter-section h4 {
+	margin: 0 0 0.5rem;
+	font-size: 1rem;
+	color: #eee;
+}
+
+.filter-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.filter-buttons button {
+	padding: 0.4rem 0.75rem;
+	border: none;
+	border-radius: 4px;
+	background-color: #555;
+	color: #fff;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.filter-buttons button.selected {
+	background-color: #888;
+}
+
+.filter-buttons button:hover {
+	background-color: #777;
+}
+

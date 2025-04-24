@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import frameOverlay from "../assets/art/HollowFrame.png";
-import "./ArtCard.css"; 
+import "./ArtCard.css";
 
 export default function ArtCard({ artwork, onClick, tooltip }) {
 	const [isWide, setIsWide] = useState(false);
@@ -19,7 +19,7 @@ export default function ArtCard({ artwork, onClick, tooltip }) {
 		const img = imgRef.current;
 		if (img) {
 			const ratio = img.naturalWidth / img.naturalHeight;
-			setIsWide(ratio >= 0.95); // shrink for square-ish and wider images
+			setIsWide(ratio >= 0.95);
 		}
 	};
 
@@ -29,23 +29,18 @@ export default function ArtCard({ artwork, onClick, tooltip }) {
 			onClick={() => onClick(artwork)}
 			style={{
 				position: "relative",
-				aspectRatio: "4 / 3",
 				width: "100%",
-				maxWidth: "220px",
+				maxWidth: "400px",
+				maxHeight: "500px",
+				aspectRatio: "4 / 3",
 				overflow: "hidden",
+				cursor: "pointer",
+				flex: "0 1 auto",
 			}}
 		>
 			<div className='tooltip'>{tooltip}</div>
-			<div
-				style={{
-					position: "absolute",
-					inset: 0,
-					overflow: "hidden",
-					display: "flex",
-					alignItems: "center",
-					justifyContent: "center",
-				}}
-			>
+
+			<div className='art-thumb-wrapper'>
 				<img
 					ref={imgRef}
 					src={artwork.image}
@@ -60,6 +55,7 @@ export default function ArtCard({ artwork, onClick, tooltip }) {
 					}}
 				/>
 			</div>
+
 			<img
 				src={frameOverlay}
 				alt='Frame Overlay'

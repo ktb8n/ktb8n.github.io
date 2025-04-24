@@ -45,7 +45,7 @@ export default function ArtGallery({ artworks }) {
 	return (
 		<div
 			style={{
-				backgroundColor: "#3a3a3a",
+				backgroundColor: "black",
 				minHeight: "100vh",
 				padding: "1rem",
 			}}
@@ -65,25 +65,28 @@ export default function ArtGallery({ artworks }) {
 				</button>
 			</div>
 
-			{isFilterExpanded && (
-				<Filter
-					allMediums={allMediums}
-					allYears={allYears}
-					selectedMediums={selectedMediums}
-					selectedYears={selectedYears}
-					toggleMedium={toggleMedium}
-					toggleYear={toggleYear}
-				/>
-			)}
-
-			<div className='gallery-flex'>
-				{filteredArtworks.map((art) => (
-					<ArtCard
-						key={art.id}
-						artwork={art}
-						onClick={() => setSelectedArt(art)}
+			<div className='gallery-layout'>
+				<div
+					className={`filter-column ${isFilterExpanded ? "slide-in" : "slide-out"}`}
+				>
+					<Filter
+						allMediums={allMediums}
+						allYears={allYears}
+						selectedMediums={selectedMediums}
+						selectedYears={selectedYears}
+						toggleMedium={toggleMedium}
+						toggleYear={toggleYear}
 					/>
-				))}
+				</div>
+				<div className='gallery-grid'>
+					{filteredArtworks.map((art) => (
+						<ArtCard
+							key={art.id}
+							artwork={art}
+							onClick={() => setSelectedArt(art)}
+						/>
+					))}
+				</div>
 			</div>
 
 			{selectedArt && (
@@ -94,4 +97,5 @@ export default function ArtGallery({ artworks }) {
 			)}
 		</div>
 	);
+
 }

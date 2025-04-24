@@ -1,6 +1,4 @@
 // Filter.js
-import React from "react";
-
 export default function Filter({
 	allMediums,
 	allYears,
@@ -10,52 +8,30 @@ export default function Filter({
 	toggleYear,
 }) {
 	return (
-		<div
-			style={{
-				borderTop: "1px solid #666",
-				borderBottom: "1px solid #666",
-				padding: "1rem 0",
-				marginBottom: "1rem",
-			}}
-		>
-			<div style={{ display: "flex", justifyContent: "space-between" }}>
-				<div>
+		<div className='filter-container'>
+			<div className='filter-section'>
+				<h4>Skill</h4>
+				<div className='filter-buttons'>
 					{allMediums.map((medium) => (
 						<button
 							key={medium}
+							className={selectedMediums.includes(medium) ? "selected" : ""}
 							onClick={() => toggleMedium(medium)}
-							style={{
-								marginRight: "0.5rem",
-								padding: "0.25rem 0.5rem",
-								border: "1px solid white",
-								borderRadius: "4px",
-								backgroundColor: selectedMediums.includes(medium)
-									? "white"
-									: "#3a3a3a",
-								color: selectedMediums.includes(medium) ? "#000" : "#fff",
-								cursor: "pointer",
-							}}
 						>
 							{medium}
 						</button>
 					))}
 				</div>
-				<div>
+			</div>
+
+			<div className='filter-section'>
+				<h4>Year</h4>
+				<div className='filter-buttons'>
 					{allYears.map((year) => (
 						<button
 							key={year}
+							className={selectedYears.includes(year) ? "selected" : ""}
 							onClick={() => toggleYear(year)}
-							style={{
-								marginLeft: "0.5rem",
-								padding: "0.25rem 0.5rem",
-								border: "1px solid white",
-								borderRadius: "4px",
-								backgroundColor: selectedYears.includes(year)
-									? "white"
-									: "#3a3a3a",
-								color: selectedYears.includes(year) ? "#000" : "#fff",
-								cursor: "pointer",
-							}}
 						>
 							{year}
 						</button>
