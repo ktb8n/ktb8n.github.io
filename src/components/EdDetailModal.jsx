@@ -75,24 +75,7 @@ export default function EdDetailModal({ edwork, onClose }) {
 					{edwork.description}
 				</p>
 
-				<div className='tags' style={{ marginTop: "1rem", textAlign: "left" }}>
-					{edwork.tags.map((tag) => (
-						<span
-							key={tag}
-							className='tag'
-							style={{
-								color: "#aaa",
-								marginRight: "0.5rem",
-								backgroundColor: "#444",
-								padding: "0.2rem 0.5rem",
-								borderRadius: "4px",
-								fontSize: "0.85rem",
-							}}
-						>
-							{tag}
-						</span>
-					))}
-				</div>
+
 			</div>
 		</div>
 	);
