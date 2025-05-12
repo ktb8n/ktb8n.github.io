@@ -38,7 +38,9 @@ import coffeeGrinder from "./assets/art/Ktb8n_OilPaint_MorningLightCoffee_2024.j
 import potpark from "./assets/art/Ktb8n_OilPaint_PotPark2025.jpg";
 import bedroom from "./assets/art/Ktb8n_OilPaint_RoomPortrait.jpg";
 import stickNLink from "./assets/art/Ktb8n_OilPaint_StickAndLink_2024.jpg";
-// import studentPresentation1 from "./assets/ed/Ktb8n-curriculum-student-work-presentation.png";
+import EdGallery from "./components/EdGallery";
+import classRoomManagement from "./assets/ed/ClassRoomManagement.JPG";
+
 
 // Misc asset imports
 import portrait1 from "./assets/Portrait01.png";
@@ -293,6 +295,20 @@ function AppContent() {
 		},
 	]);
 
+const [educationEvidence] = useLocalStorage("morrowroot-data", [
+	{
+		id: 1,
+		title: "Station Cards",
+		year: "2018",
+		medium: "Instruction Cards",
+		tags: ["process", "publishing", "reflection"],
+		image: classRoomManagement,
+		description:
+			"These cards served as a way to manage the number of seats per station (students chose cards as they came in, reserving their seat at a station). They also provided students a reminder of expectations and behavior.",
+	},
+]);
+
+
 	const location = useLocation();
 	const navigate = useNavigate();
 
@@ -391,7 +407,7 @@ function AppContent() {
 						Engineering
 					</NavLink>
 					<NavLink
-						to='/curriculum'
+						to='/ed'
 						className={({ isActive }) => (isActive ? "active" : "")}
 					>
 						Curriculum
@@ -405,7 +421,7 @@ function AppContent() {
 					<Route path='/' element={<Navigate to='/art' />} />
 					<Route path='/art' element={<ArtGallery artworks={artworks} />} />
 					<Route path='/dev' element={<DevGallery />} />
-					<Route path='/curriculum' element={<CurriculumGallery />} />
+					<Route path='/ed' element={<EdGallery items={educationEvidence} />} />
 				</Routes>
 			</main>
 
