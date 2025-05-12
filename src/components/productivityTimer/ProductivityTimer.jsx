@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./ProductivityTimer.css";
 
-const beep = new Audio("https://www.soundjay.com/button/beep-07.wav");
 
 const ProductivityTimer = () => {
 	const [intervals, setIntervals] = useState(4);
@@ -56,7 +55,6 @@ const ProductivityTimer = () => {
 		timerRef.current = setInterval(() => {
 			setTimeLeft((prev) => {
 				if (prev <= 1) {
-					beep.play();
 					const nextIndex = currentIndex + 1;
 					if (nextIndex >= intervalPlan.current.length) {
 						stopTimer();
@@ -76,7 +74,6 @@ const ProductivityTimer = () => {
 			timerRef.current = setInterval(() => {
 				setTimeLeft((prev) => {
 					if (prev <= 1) {
-						beep.play();
 						const nextIndex = currentIndex + 1;
 						if (nextIndex >= intervalPlan.current.length) {
 							stopTimer();
