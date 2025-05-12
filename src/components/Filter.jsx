@@ -25,7 +25,7 @@ export default function Filter({
 			</div>
 
 			<div className='filter-section'>
-				<h4>Year</h4>
+				{/* <h4>Year</h4> */}
 				<div className='filter-buttons'>
 					{allYears.map((year) => (
 						<button

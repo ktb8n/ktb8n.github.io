@@ -8,7 +8,7 @@ export default function ArtGallery({ artworks }) {
 	const [selectedMediums, setSelectedMediums] = useState([]);
 	const [selectedYears, setSelectedYears] = useState([]);
 	const [selectedArt, setSelectedArt] = useState(null);
-	const [isFilterExpanded, setIsFilterExpanded] = useState(true);
+	const [isFilterExpanded, setIsFilterExpanded] = useState(false);
 	
 
 	if (!Array.isArray(artworks)) {

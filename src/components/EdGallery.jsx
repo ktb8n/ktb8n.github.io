@@ -10,7 +10,7 @@ export default function EdGallery({ edworks }) {
 	const [selectedMediums, setSelectedMediums] = useState([]);
 	const [selectedYears, setSelectedYears] = useState([]);
 	const [selectedEd, setSelectedEd] = useState(null);
-	const [isFilterExpanded, setIsFilterExpanded] = useState(true);
+	const [isFilterExpanded, setIsFilterExpanded] = useState(false);
 
     if (!Array.isArray(edworks)) {
 		return <div style={{ color: "#fff" }}>Loading gallery...</div>;

@@ -13,7 +13,7 @@ export default function DevGallery() {
 	const [activeProject, setActiveProject] = useState(null);
 	const [selectedSkills, setSelectedSkills] = useState([]);
 	const [selectedYears, setSelectedYears] = useState([]);
-	const [isFilterExpanded, setIsFilterExpanded] = useState(true);
+	const [isFilterExpanded, setIsFilterExpanded] = useState(false);
 
 	const devProjects = [
 		{
