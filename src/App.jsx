@@ -13,7 +13,7 @@ import {
 import ArtGallery from "./components/ArtGallery";
 import ArtDetailModal from "./components/ArtDetailModal";
 import DevGallery from "./components/DevGallery";
-import CurriculumGallery from "./components/CurriculumGallery";
+import EdGallery from "./components/EdGallery";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 
 // Art asset imports
@@ -38,7 +38,6 @@ import coffeeGrinder from "./assets/art/Ktb8n_OilPaint_MorningLightCoffee_2024.j
 import potpark from "./assets/art/Ktb8n_OilPaint_PotPark2025.jpg";
 import bedroom from "./assets/art/Ktb8n_OilPaint_RoomPortrait.jpg";
 import stickNLink from "./assets/art/Ktb8n_OilPaint_StickAndLink_2024.jpg";
-import EdGallery from "./components/EdGallery";
 import classRoomManagement from "./assets/ed/ClassRoomManagement.JPG";
 import classRoomManagement1 from "./assets/ed/ClassRoomManagement1.JPG";
 import classRoomManagement2 from "./assets/ed/ClassRoomManagement2.jpeg";
@@ -67,6 +66,10 @@ import Worktime5 from "./assets/ed/Worktime5.JPG";
 import Worktime6 from "./assets/ed/Worktime6.JPG";
 import Worktime7 from "./assets/ed/Worktime7.JPG";
 import Worktime8 from "./assets/ed/Worktime8.JPG";
+import FADCritique from "./assets/ed/FamilyArtDayCritique.JPG";
+import LearningTargets from "./assets/ed/IMG_2862.JPG";
+import FamilyArtDayInstructions from "./assets/ed/FAD_ColoredLayers1.png";
+
 // Misc asset imports
 import portrait1 from "./assets/Portrait01.png";
 import portrait2 from "./assets/Portrait02.png";
@@ -323,7 +326,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 1,
 		title: "Station Cards",
-		year: "2018",
 		medium: "Instruction Cards",
 		tags: ["process", "publishing", "reflection"],
 		image: classRoomManagement,
@@ -333,7 +335,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 2,
 		title: "Art Class Set Up and Clean Up Display",
-		year: "",
 		medium: "Instruction",
 		tags: ["cleanup", "responsibility", "organization"],
 		image: classRoomManagement1,
@@ -343,7 +344,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 3,
 		title: "Painting Center",
-		year: "",
 		medium: "Classroom Set Up",
 		tags: ["painting", "media", "technique"],
 		image: classRoomManagement2,
@@ -353,7 +353,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 4,
 		title: "Drawing Center",
-		year: "",
 		medium: "Instruction Card",
 		tags: ["cleanup", "painting", "tools"],
 		image: classRoomManagement3,
@@ -361,9 +360,8 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 			"Students were given access to observation tools and a variety of media...",
 	},
 	{
-		id: 5,
+		id: 28,
 		title: "Hand Washing",
-		year: "",
 		medium: "Instruction Card",
 		tags: ["sculpture", "3D art", "materials"],
 		image: classRoomManagement4,
@@ -373,7 +371,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 6,
 		title: "SketchBook Storage",
-		year: "",
 		medium: "Classroom Management",
 		tags: ["drawing", "observation", "medium"],
 		image: classRoomManagement6,
@@ -383,7 +380,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 7,
 		title: "Resource Center",
-		year: "",
 		medium: "Instruction Card",
 		tags: ["artwork", "naming", "instructions"],
 		image: classRoomManagement7,
@@ -393,7 +389,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 8,
 		title: "Instruction Zone",
-		year: "",
 		medium: "Instruction Card",
 		tags: [
 			"crafting",
@@ -410,7 +405,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 9,
 		title: "Third Grade Learning Targets",
-		year: "",
 		medium: "Instruction Card",
 		tags: ["Learning Targets", "Assessment", "Curriculum", "Grade 3"],
 		image: curriculum3,
@@ -420,7 +414,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 10,
 		title: "Fourth Grade Learning Targets",
-		year: "",
 		medium: "Instruction Card",
 		tags: ["Learning Targets", "Assessment", "Curriculum"],
 		image: curriculum4,
@@ -430,7 +423,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 11,
 		title: "Fifth Grade Learning Targets",
-		year: "",
 		medium: "Instruction Card",
 		tags: ["Learning Targets", "Assessment", "Curriculum", "Grade 5"],
 		image: curriculum5,
@@ -440,7 +432,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 12,
 		title: "Family Art Day Instruction",
-		year: "",
 		medium: "Learning Targets",
 		tags: ["Family Art Day", "Community", "Instruction"],
 		image: instructionFamilyArtDay,
@@ -450,7 +441,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 13,
 		title: "4th Grade Art Instruction",
-		year: "",
 		medium: "Art Lessons",
 		tags: ["Public School", "Art Lessons", "Instruction", "Grade 4"],
 		image: instructionSunrise1,
@@ -460,7 +450,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 14,
 		title: "Lac Courtes Oreilles Art Show",
-		year: "",
 		medium: "Art Show",
 		tags: ["Public School", "Art Show", "Display"],
 		image: lcoArtShow,
@@ -470,7 +459,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 15,
 		title: "Beauty",
-		year: "2018",
 		medium: "Colored Pencils",
 		tags: ["Published", "Student Art", "Imagination", "Grade 2"],
 		image: studentArt2,
@@ -480,7 +468,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 16,
 		title: "Sunflower",
-		year: "",
 		medium: "Paint",
 		tags: ["Published", "Student Art", "Imagination", "Grade 4"],
 		image: studentArt4,
@@ -490,7 +477,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 16,
 		title: "Value",
-		year: "",
 		medium: "Colored Pencils",
 		tags: ["Published", "Student Art", "Imagination", "Grade 4"],
 		image: studentArt3,
@@ -500,7 +486,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 17,
 		title: "Untitled",
-		year: "",
 		medium: "Oil Pastels",
 		tags: ["Published", "Student Art", "Observational Drawing", "Grade 2"],
 		image: studentArt1,
@@ -510,7 +495,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 18,
 		title: "Puffy",
-		year: "",
 		medium: "Marker",
 		tags: ["Published", "Student Art", "Observational Drawing", "Grade 1"],
 		image: studentArt5,
@@ -520,7 +504,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 19,
 		title: "Illegal",
-		year: "",
 		medium: "Multi-Media",
 		tags: ["Published", "Student Art", "Memory Drawing", "Grade 2"],
 		image: studentArt7,
@@ -530,7 +513,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 20,
 		title: "Dinosaur Artwork",
-		year: "",
 		medium: "Multi-Media",
 		tags: ["Published", "Student Art", "Memory Drawing", "Grade 2"],
 		image: studentArt9,
@@ -540,7 +522,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 21,
 		title: "Art Challenge",
-		year: "",
 		medium: "Educational Tools",
 		tags: ["Art Challenge", "Classroom Management", "Resources"],
 		image: StudentChallenges,
@@ -550,7 +531,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 22,
 		title: "Student Critique",
-		year: "",
 		medium: "Critique",
 		tags: ["Critical Thinking", "Reflection", "Gallery", "Critique", "Grade 4"],
 		image: StudentCritique,
@@ -560,7 +540,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 23,
 		title: "Student Critique",
-		year: "",
 		medium: "Critique",
 		tags: ["Critical Thinking", "Reflection", "Gallery", "Critique", "Grade 2"],
 		image: StudentCritique2,
@@ -570,7 +549,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 24,
 		title: "Worktime",
-		year: "",
 		medium: "Paint",
 		tags: ["Worktime", "Color Mixing", "Paint", "Grade 2"],
 		image: Worktime5,
@@ -580,7 +558,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 25,
 		title: "Worktime",
-		year: "",
 		medium: "Paint",
 		tags: ["Worktime", "Color Mixing", "Paint", "Grade 1"],
 		image: Worktime6,
@@ -590,7 +567,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 25,
 		title: "Worktime",
-		year: "",
 		medium: "Paint",
 		tags: ["Worktime", "Color Mixing", "Paint", "Grade 1"],
 		image: Worktime7,
@@ -600,12 +576,38 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 	{
 		id: 25,
 		title: "Worktime",
-		year: "",
 		medium: "Paint",
 		tags: ["Worktime", "Observational Drawing", "Colored Pencils", "Grade 4"],
 		image: Worktime8,
 		description:
 			"Shown here is an example of classroom management during the height of covid pandemic precautions. Instead of having students collect supplies following studio traffic patterns, I adjusted their planning process to mitigate the amount of students in a certain area of the room. Students had do first fill out their daily art plan: identifying where their idea is coming from, choosing a medium, sketching their idea and then raising their hand to have a brief discussion with me before collecting their supplies. This was a great way to connect with artists before they began - a process I kept once distancing was no longer a concern.",
+	},
+	{
+		id: 26,
+		title: "Family Art Day Critique",
+		medium: "Paint",
+		tags: ["Worktime", "Family Art Day", "Paint", "Grade 1"],
+		image: FADCritique,
+		description:
+			"Students are encouraged to hang their artwork on the art room walls to have discussions about their choices and process.",
+	},
+	{
+		id: 27,
+		title: "Family Art Day Instructions",
+		medium: "Paint",
+		tags: ["Worktime", "Family Art Day", "Paint", "Grade 1"],
+		image: FamilyArtDayInstructions,
+		description:
+			"Families are given a set of instructions to help them navigate the art room and the project. I am careful to rely on images to get the message across so that artists can participate regardless of their reading level or knowledge of English.",
+	},
+	{
+		id: 5,
+		title: "Learning Targets",
+		medium: "Instruction",
+		tags: ["Resources", "Instructions", "Learning Targets", "Grade 3", "Grade 4", "Grade 5"],
+		image: LearningTargets,
+		description:
+			"Trimesterly learning targets are posted in the art room for students to reference. I use these targets to assess student progress and growth.",
 	},
 ]);
 

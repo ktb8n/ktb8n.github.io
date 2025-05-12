@@ -258,3 +258,18 @@ h2 {
 	background-color: #777;
 }
 
+.toggle-filter-button {
+	padding: 0.25rem 0.5rem;
+	color: white;
+	background-color: #333;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	transition: background-color 0.2s;
+}
+
+.toggle-filter-button:hover {
+	background-color: #555;
+}
+
+

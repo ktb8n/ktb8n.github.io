@@ -110,15 +110,8 @@ export default function DevGallery() {
 			}}
 		>
 			<button
+				className='toggle-filter-button'
 				onClick={() => setIsFilterExpanded(!isFilterExpanded)}
-				style={{
-					marginBottom: "1rem",
-					padding: "0.25rem 0.5rem",
-					backgroundColor: "#000000",
-					color: "#fff",
-					border: "none",
-					cursor: "pointer",
-				}}
 			>
 				{isFilterExpanded ? "Hide Filter" : "Show Filter"}
 			</button>

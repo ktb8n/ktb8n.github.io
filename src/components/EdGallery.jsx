@@ -53,13 +53,8 @@ export default function EdGallery({ edworks }) {
 		>
 			<div style={{ marginBottom: "0.5rem", color: "#ccc" }}>
 				<button
+					className='toggle-filter-button'
 					onClick={() => setIsFilterExpanded(!isFilterExpanded)}
-					style={{
-						padding: "0.25rem 0.5rem",
-						color: "#fff",
-						border: "none",
-						cursor: "pointer",
-					}}
 				>
 					{isFilterExpanded ? "Hide Filter" : "Show Filter"}
 				</button>
