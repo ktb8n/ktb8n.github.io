@@ -40,7 +40,7 @@ import bedroom from "./assets/art/Ktb8n_OilPaint_RoomPortrait.jpg";
 import stickNLink from "./assets/art/Ktb8n_OilPaint_StickAndLink_2024.jpg";
 import classRoomManagement from "./assets/ed/ClassRoomManagement.JPG";
 import classRoomManagement1 from "./assets/ed/ClassRoomManagement1.JPG";
-import classRoomManagement2 from "./assets/ed/ClassRoomManagement2.jpeg";
+//import classRoomManagement2 from "./assets/ed/ClassRoomManagement2.jpeg";
 import classRoomManagement3 from "./assets/ed/ClassRoomManagement3.JPG";
 import classRoomManagement4 from "./assets/ed/ClassRoomManagement4.JPG";
 import classRoomManagement6 from "./assets/ed/ClassRoomManagement6.JPG";
@@ -339,25 +339,41 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 		tags: ["cleanup", "responsibility", "organization"],
 		image: classRoomManagement1,
 		description:
-			"This system managed the simultaneous set up of a class of students...",
+			"This system managed the simultaneous set up of a class of students learning how to set up to paint. In order to expedite set up time, students began gathering the supply that matched their table color and then moved through the rest of the list. My classrooms typically employ 1 way traffic patterns, so students were able to move through the room without crossing paths with other students. This system also allowed for students to be responsible for their own set up and clean up, as they were able to see what was expected of them.",
 	},
-	{
-		id: 3,
-		title: "Painting Center",
-		medium: "Classroom Set Up",
-		tags: ["painting", "media", "technique"],
-		image: classRoomManagement2,
-		description:
-			"Students were responsible for the set up and clean up of all materials...",
-	},
+	// {
+	// 	id: 3,
+	// 	title: "Painting Station",
+	// 	medium: "Classroom Set Up",
+	// 	tags: ["painting", "media", "technique"],
+	// 	image: classRoomManagement2,
+	// 	description:
+	// 		"Students were responsible for the setting up their paint palettes and work stations without direct supervision. . ",
+	// },
 	{
 		id: 4,
-		title: "Drawing Center",
+		title: "Entering the Art Room",
 		medium: "Instruction Card",
 		tags: ["cleanup", "painting", "tools"],
 		image: classRoomManagement3,
 		description:
-			"Students were given access to observation tools and a variety of media...",
+			"An early iteration of how I manage student behavior. The post is an example of how I simplify processes to reduce the amount of time we spend in transition. The toy models and paper are available to students to finish their work - they are welcome to free draw with dry materials so long as they are following school rules and expectations.",
+	},
+	{
+		id: 5,
+		title: "Learning Targets",
+		medium: "Instruction",
+		tags: [
+			"Resources",
+			"Instructions",
+			"Learning Targets",
+			"Grade 3",
+			"Grade 4",
+			"Grade 5",
+		],
+		image: LearningTargets,
+		description:
+			"Trimesterly learning targets are posted in the art room for students to reference. I use these targets to assess student progress and growth.",
 	},
 	{
 		id: 28,
@@ -366,7 +382,7 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 		tags: ["sculpture", "3D art", "materials"],
 		image: classRoomManagement4,
 		description:
-			"I develop a less-than-5 step process for anything that needs to be done quickly...",
+			"An example of how I communicate process and expectations. Having visual ques and reminders help students remember the steps to take when washing their hands. This is especially important in a classroom where students are often using messy materials.",
 	},
 	{
 		id: 6,
@@ -375,7 +391,7 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 		tags: ["drawing", "observation", "medium"],
 		image: classRoomManagement6,
 		description:
-			"Students kept sketchbooks in the art room, used for art challenges...",
+			"Students kept sketchbooks in the art room, used for art challenges and planning their work out. The sketchbooks were organized to expedite transitions and allow students to be responsible for their own materials. The sketchbooks were also used as a way to track student progress and growth.",
 	},
 	{
 		id: 7,
@@ -384,7 +400,7 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 		tags: ["artwork", "naming", "instructions"],
 		image: classRoomManagement7,
 		description:
-			"To cultivate a sense of artistic behavior, I keep a resource center stocked with images...",
+			"To cultivate a sense of artistic behavior, I keep a resource center stocked with images and ideas for students to reference. This is a great way to help students who are struggling with their own ideas and also a way to help students who are looking for inspiration. The resource center is also a great way to help students explore content meaningful to them.",
 	},
 	{
 		id: 8,
@@ -400,7 +416,7 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 		],
 		image: classRoomManagement8,
 		description:
-			"Space dedicated to art discussions and lessons—away from the mess of the art stations.",
+			"Space dedicated to art discussions and lessons—away from the mess of the art stations. All classes follow the same schedule for the sake of consistency. I like often use consistency as a way to help students feel safe and secure in the art room. I find it helps them gain the confidence necessary to explore and share their ideas.",
 	},
 	{
 		id: 9,
@@ -436,7 +452,7 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 		tags: ["Family Art Day", "Community", "Instruction"],
 		image: instructionFamilyArtDay,
 		description:
-			"Family Art Day is a drop-in public art project I design monthly based on a visiting artist’s work...",
+			"Family Art Day is a drop-in public art project I design monthly based on a visiting artist’s work in the gallery. It's a drop-in, all ages community space where families can come and create together. I began connecting the projec to the current artists in 2024 - further bolstering the connection between the school, the community and the art world in general.",
 	},
 	{
 		id: 13,
@@ -445,7 +461,7 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 		tags: ["Public School", "Art Lessons", "Instruction", "Grade 4"],
 		image: instructionSunrise1,
 		description:
-			"Each class follows the structure: Art Challenge → Art Talk → Studio Time → Reflection...",
+			"Each class follows the structure: Art Challenge → Art Talk → Studio Time → Reflection. In this photo I am kick starting a discussion comparing two works of art with similar symbols but different messages and media. This is a great way to help students understand the importance of the artist's choice of media and how it can affect the message of the artwork.",
 	},
 	{
 		id: 14,
@@ -454,7 +470,7 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 		tags: ["Public School", "Art Show", "Display"],
 		image: lcoArtShow,
 		description:
-			"The Lac Courtes Oreilles reservation hosts a yearly display of student work...",
+			"The Lac Courtes Oreilles k12 School hosts an annual art show to showcase the work of students in the community. This is a great way to help students feel proud of their work and share it with their families and the community. The show is open to the public and features a variety of student artwork, including paintings, drawings, sculptures, and more.",
 	},
 	{
 		id: 15,
@@ -463,7 +479,7 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 		tags: ["Published", "Student Art", "Imagination", "Grade 2"],
 		image: studentArt2,
 		description:
-			"Students were responsible for publishing their artwork for hallway galleries...",
+			"Students were responsible for publishing their artwork for hallway galleries. They were taught about 'untitled' and 'titled' work, anonymous and signed work, and how to include the medium on the label. What orginally started as a way for me to track student work and understanding became the first step in our gallery process. This idea jumpstarted more meaningul critiques and decreased noise in the hallway during transitions because students were eager to see what other students had published.",
 	},
 	{
 		id: 16,
@@ -472,7 +488,7 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 		tags: ["Published", "Student Art", "Imagination", "Grade 4"],
 		image: studentArt4,
 		description:
-			"Student-created artwork demonstrating individuality and application of the studio setup process...",
+			"Students were responsible for publishing their artwork for hallway galleries. They were taught about 'untitled' and 'titled' work, anonymous and signed work, and how to include the medium on the label. What orginally started as a way for me to track student work and understanding became the first step in our gallery process. This idea jumpstarted more meaningul critiques and decreased noise in the hallway during transitions because students were eager to see what other students had published.",
 	},
 	{
 		id: 16,
@@ -481,7 +497,7 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 		tags: ["Published", "Student Art", "Imagination", "Grade 4"],
 		image: studentArt3,
 		description:
-			"Student-created artwork demonstrating individuality and application of the studio setup process...",
+			"Students were responsible for publishing their artwork for hallway galleries. They were taught about 'untitled' and 'titled' work, anonymous and signed work, and how to include the medium on the label. What orginally started as a way for me to track student work and understanding became the first step in our gallery process. This idea jumpstarted more meaningul critiques and decreased noise in the hallway during transitions because students were eager to see what other students had published.",
 	},
 	{
 		id: 17,
@@ -490,7 +506,7 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 		tags: ["Published", "Student Art", "Observational Drawing", "Grade 2"],
 		image: studentArt1,
 		description:
-			"Student-created artwork demonstrating individuality and application of the studio setup process...",
+			"Students were responsible for publishing their artwork for hallway galleries. They were taught about 'untitled' and 'titled' work, anonymous and signed work, and how to include the medium on the label. What orginally started as a way for me to track student work and understanding became the first step in our gallery process. This idea jumpstarted more meaningul critiques and decreased noise in the hallway during transitions because students were eager to see what other students had published.",
 	},
 	{
 		id: 18,
@@ -499,7 +515,7 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 		tags: ["Published", "Student Art", "Observational Drawing", "Grade 1"],
 		image: studentArt5,
 		description:
-			"This is the first published piece from a student who often struggled to manage their behavior in a classroom setting. This piece was a breakthrough for them, and they were so proud to have it displayed in the hallway.",
+			"Students were responsible for publishing their artwork for hallway galleries. They were taught about 'untitled' and 'titled' work, anonymous and signed work, and how to include the medium on the label. What orginally started as a way for me to track student work and understanding became the first step in our gallery process. This idea jumpstarted more meaningul critiques and decreased noise in the hallway during transitions because students were eager to see what other students had published. This is the first published piece from a student who often struggled to manage their behavior in a classroom setting. This piece was a breakthrough for them, and they were so proud to have it displayed.",
 	},
 	{
 		id: 19,
@@ -508,7 +524,7 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 		tags: ["Published", "Student Art", "Memory Drawing", "Grade 2"],
 		image: studentArt7,
 		description:
-			"Student-created artwork demonstrating individuality and application of the studio setup process...",
+			"Students were responsible for publishing their artwork for hallway galleries. They were taught about 'untitled' and 'titled' work, anonymous and signed work, and how to include the medium on the label. What orginally started as a way for me to track student work and understanding became the first step in our gallery process. This idea jumpstarted more meaningul critiques and decreased noise in the hallway during transitions because students were eager to see what other students had published.",
 	},
 	{
 		id: 20,
@@ -517,7 +533,7 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 		tags: ["Published", "Student Art", "Memory Drawing", "Grade 2"],
 		image: studentArt9,
 		description:
-			"This student was often kept out of specials and unable to participate in situations where behavior heavily relies on social norms. This piece was a breakthrough for them, participating in the creation and publication of their artwork alongside their peers.",
+			"Students were responsible for publishing their artwork for hallway galleries. They were taught about 'untitled' and 'titled' work, anonymous and signed work, and how to include the medium on the label. What orginally started as a way for me to track student work and understanding became the first step in our gallery process. This idea jumpstarted more meaningul critiques and decreased noise in the hallway during transitions because students were eager to see what other students had published. This student was often kept out of specials and unable to participate in situations where behavior heavily relies on social norms. This piece was a breakthrough for them, participating in the creation and publication of their artwork alongside their peers.",
 	},
 	{
 		id: 21,
@@ -599,15 +615,6 @@ const [educationEvidence] = useLocalStorage("morrowroot-education", [
 		image: FamilyArtDayInstructions,
 		description:
 			"Families are given a set of instructions to help them navigate the art room and the project. I am careful to rely on images to get the message across so that artists can participate regardless of their reading level or knowledge of English.",
-	},
-	{
-		id: 5,
-		title: "Learning Targets",
-		medium: "Instruction",
-		tags: ["Resources", "Instructions", "Learning Targets", "Grade 3", "Grade 4", "Grade 5"],
-		image: LearningTargets,
-		description:
-			"Trimesterly learning targets are posted in the art room for students to reference. I use these targets to assess student progress and growth.",
 	},
 ]);
 
