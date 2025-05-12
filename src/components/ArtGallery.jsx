@@ -60,20 +60,21 @@ export default function ArtGallery({ artworks }) {
 			</div>
 
 			<div className='gallery-layout'>
-				<div
-					className={`filter-column ${
-						isFilterExpanded ? "slide-in" : "slide-out"
-					}`}
-				>
-					<Filter
-						allMediums={allMediums}
-						allYears={allYears}
-						selectedMediums={selectedMediums}
-						selectedYears={selectedYears}
-						toggleMedium={toggleMedium}
-						toggleYear={toggleYear}
-					/>
-				</div>
+				{/* FILTER PANEL */}
+				{isFilterExpanded && (
+					<div className='filter-column'>
+						<Filter
+							allMediums={allMediums}
+							allYears={allYears}
+							selectedMediums={selectedMediums}
+							selectedYears={selectedYears}
+							toggleMedium={toggleMedium}
+							toggleYear={toggleYear}
+						/>
+					</div>
+				)}
+
+				{/* GALLERY GRID */}
 				<div className='gallery-grid'>
 					{[...filteredArtworks]
 						.sort((a, b) => parseInt(b.year) - parseInt(a.year))

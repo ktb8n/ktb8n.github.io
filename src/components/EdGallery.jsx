@@ -75,6 +75,7 @@ export default function EdGallery({ edworks }) {
 						toggleYear={toggleYear}
 					/>
 				</div>
+
 				<div className='gallery-grid'>
 					{[...filteredEdworks]
 						.map((item, index) => ({ ...item, originalIndex: index })) // track original order
@@ -83,9 +84,9 @@ export default function EdGallery({ edworks }) {
 							const yearB = parseInt(b.year) || 0;
 
 							if (yearA !== yearB) {
-								return yearB - yearA; // sort by year descending
+								return yearB - yearA; // year descending
 							}
-							return b.originalIndex - a.originalIndex; // reverse insertion order within same year
+							return b.originalIndex - a.originalIndex; // reverse order within same year
 						})
 						.map((ed) => (
 							<EdCard

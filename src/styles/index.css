@@ -273,3 +273,38 @@ h2 {
 }
 
 
+@media (max-width: 768px) {
+	.gallery-layout {
+		flex-direction: column;
+	}
+
+	.filter-column {
+		width: 100%;
+		position: relative;
+		transform: none !important;
+		opacity: 1 !important;
+	}
+
+	.slide-out {
+		display: none;
+		position: static;
+	}
+}
+
+.toggle-filter-button {
+	padding: 0.5rem;
+	color: white;
+	background-color: #444;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	width: fit-content;
+	margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+	.toggle-filter-button {
+		width: 100%;
+		text-align: center;
+	}
+}

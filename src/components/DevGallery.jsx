@@ -109,12 +109,14 @@ export default function DevGallery() {
 				padding: "1rem",
 			}}
 		>
-			<button
-				className='toggle-filter-button'
-				onClick={() => setIsFilterExpanded(!isFilterExpanded)}
-			>
-				{isFilterExpanded ? "Hide Filter" : "Show Filter"}
-			</button>
+			<div style={{ marginBottom: "0.5rem", color: "#ccc" }}>
+				<button
+					className='toggle-filter-button'
+					onClick={() => setIsFilterExpanded(!isFilterExpanded)}
+				>
+					{isFilterExpanded ? "Hide Filter" : "Show Filter"}
+				</button>
+			</div>
 
 			<div className='gallery-layout'>
 				<div
@@ -123,7 +125,7 @@ export default function DevGallery() {
 					}`}
 				>
 					<Filter
-						allMediums={allSkills} // just reuse the prop names!
+						allMediums={allSkills}
 						allYears={allYears}
 						selectedMediums={selectedSkills}
 						selectedYears={selectedYears}
