@@ -5,6 +5,7 @@ body {
 	background-color: #3a3a3a;
 	margin: 0;
 	padding: 0;
+	min-width: 450px;
 }
 
 .container {
@@ -214,11 +215,11 @@ h2 {
 }
 
 .gallery-grid {
-	flex: 1; /* ← allow it to grow */
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: center; /* center cards horizontally */
 	gap: 1rem;
+	width: 100%;
 }
 
 .filter-container {

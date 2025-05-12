@@ -1,3 +1,16 @@
+@media (max-width: 768px) {
+	.card-container {
+		width: 90vw;
+		height: 90vw;
+	}
+}
+@media (max-width: 768px) {
+	.card-image {
+		top: 25%;
+		height: 45%;
+	}
+}
+
 .card-container {
 	position: relative;
 	width: 375px;
